@@ -19,3 +19,6 @@ subprojects {
 tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }
+
+// Fix für das Android Gradle Plugin (AGP) DSL-Verhalten in modernen Cloud-Umgebungen
+project.ext.set("android.newDsl", false)
