@@ -4,7 +4,6 @@ workflows:
     instance_type: mac_mini_m1
     environment:
       flutter: stable
-      gradle: 8.10.2
     scripts:
       - name: Build Android App Bundle
         script: |
