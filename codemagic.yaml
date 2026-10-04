@@ -1,0 +1,13 @@
+workflows:
+  default-workflow:
+    name: Default Workflow
+    instance_type: mac_mini_m1
+    environment:
+      flutter: stable
+      gradle: 8.10.2
+    scripts:
+      - name: Build Android App Bundle
+        script: |
+          flutter build appbundle --release
+    artifacts:
+      - build/app/outputs/bundle/release/*.aab
